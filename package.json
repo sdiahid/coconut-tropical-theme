@@ -1,0 +1,26 @@
+{
+    "name": "coconut-theme",
+    "displayName": "Coconut Theme",
+    "description": "A tropical and fresh theme for VS Code.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Coconut Light",
+                "uiTheme": "vs",
+                "path": "./themes/coconut-light.json"
+            },
+            {
+                "label": "Tropical Grey",
+                "uiTheme": "vs-dark",
+                "path": "./themes/tropical-grey.json"
+            }
+        ]
+    }
+}
