@@ -1,6 +1,7 @@
 {
-    "name": "coconut-theme",
-    "displayName": "Coconut Theme",
+    "name": "coconut-tropical-theme",
+    "publisher": "sdiahid",
+    "displayName": "Coconut Tropical Theme",
     "description": "A tropical and fresh theme for VS Code.",
     "version": "0.0.1",
     "engines": {
