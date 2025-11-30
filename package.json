@@ -3,6 +3,11 @@
     "publisher": "sdiahid",
     "displayName": "Coconut Tropical Theme",
     "description": "A tropical and fresh theme for VS Code.",
+    "icon": "icono.png",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/sdiahid/coconut-tropical-theme"
+    },
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.60.0"
