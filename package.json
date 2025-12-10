@@ -1,32 +1,50 @@
 {
-    "name": "coconut-tropical-theme",
-    "publisher": "sdiahid",
-    "displayName": "Coconut Tropical Theme",
-    "description": "A tropical and fresh theme for VS Code.",
-    "icon": "icono.png",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/sdiahid/coconut-tropical-theme"
-    },
-    "version": "0.0.1",
-    "engines": {
-        "vscode": "^1.60.0"
-    },
-    "categories": [
-        "Themes"
+  "name": "coconut-tropical-theme",
+  "publisher": "sdiahid",
+  "displayName": "Coconut Tropical Theme",
+  "description": "A tropical and fresh theme for VS Code.",
+  "icon": "icono.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sdiahid/coconut-tropical-theme"
+  },
+  "version": "0.0.3",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "compile": "tsc -p ."
+  },
+  "engines": {
+    "vscode": "^1.60.0",
+    "pnpm": ">=10.24.0"
+  },
+  "devDependencies": {
+    "@types/vscode": "1.60.0",
+    "@types/node": "^24.10.1",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {},
+  "categories": [
+    "Themes"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "Coconut Light",
+        "uiTheme": "vs",
+        "path": "./themes/coconut-light.json"
+      },
+      {
+        "label": "Tropical Grey",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tropical-grey.json"
+      }
     ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Coconut Light",
-                "uiTheme": "vs",
-                "path": "./themes/coconut-light.json"
-            },
-            {
-                "label": "Tropical Grey",
-                "uiTheme": "vs-dark",
-                "path": "./themes/tropical-grey.json"
-            }
-        ]
-    }
+    "commands": [
+      {
+        "command": "coconut-tropical-theme.openMenu",
+        "title": "Coconut: Open panel"
+      }
+    ]
+  }
 }
