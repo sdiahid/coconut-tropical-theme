@@ -27,9 +27,6 @@
     "Themes"
   ],
   "main": "./out/extension.js",
-  "activationEvents": [
-    "onCommand:coconut-tropical-theme.openMenu"
-  ],
   "contributes": {
     "themes": [
       {

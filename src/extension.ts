@@ -16,6 +16,26 @@ export function activate(context: vscode.ExtensionContext) {
         panel.webview,
         context.extensionUri
       );
+
+      panel.webview.onDidReceiveMessage(
+        (message: any) => {
+          if (message.type === 'changeTheme' && typeof message.themeName === 'string') {
+            const config = vscode.workspace.getConfiguration('workbench');
+
+            config.update(
+              'colorTheme',
+              message.themeName,
+              vscode.ConfigurationTarget.Global
+            );
+
+            vscode.window.showInformationMessage(
+              `Tema cambiado a: ${message.themeName}`
+            );
+          }
+        },
+        undefined,
+        context.subscriptions
+      );
     }
   );
 
